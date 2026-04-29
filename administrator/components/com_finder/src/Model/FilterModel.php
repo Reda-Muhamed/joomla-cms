@@ -144,7 +144,7 @@ class FilterModel extends AdminModel
         return $db->setQuery($query)->loadResult();
     }
 
-     /**
+    /**
      * Method to save the form data.
      * Intercepts custom author filter and maps it to Finder Taxonomy ID.
      *

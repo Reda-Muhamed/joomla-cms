@@ -170,7 +170,7 @@ class Filter
                 'accordion-' . $bk
             );
 
-             if ($bv->title === 'Author') {
+            if ($bv->title === 'Author') {
                 $currentUser = Factory::getApplication()->getIdentity();
 
                 // Load Joomla Switcher CSS
