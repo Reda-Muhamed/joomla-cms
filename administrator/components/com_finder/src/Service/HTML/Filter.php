@@ -171,17 +171,15 @@ class Filter
             );
 
             if ($bv->title === 'Author') {
-                $currentUser = Factory::getApplication()->getIdentity();
-
                 // Load Joomla Switcher CSS
                 Factory::getApplication()->getDocument()->getWebAssetManager()->useStyle('switcher');
 
                 $html .= '<div class="d-flex align-items-center mb-3">';
                 $html .= '	<label class="form-label fw-bold me-3 mb-0">';
-                $html .= '		Active user only (' . htmlspecialchars($currentUser->name, ENT_QUOTES, 'UTF-8') . ')';
+                $html .= '		' . Text::_('COM_FINDER_ACTIVE_USER_ONLY');
                 $html .= '	</label>';
                 $html .= '	<fieldset id="custom_author_filter" class="switcher">';
-                $html .= '		<legend class="visually-hidden">Active user only</legend>';
+                $html .= '		<legend class="visually-hidden">' . Text::_('COM_FINDER_ACTIVE_USER_ONLY') . '</legend>';
                 $html .= '		<input type="radio" id="custom_author_filter_no" name="custom_author_filter" value="0" checked class="active">';
                 $html .= '		<label for="custom_author_filter_no">No</label>';
                 $html .= '		<input type="radio" id="custom_author_filter_yes" name="custom_author_filter" value="1">';
